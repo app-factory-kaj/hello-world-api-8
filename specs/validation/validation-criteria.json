@@ -1,0 +1,15 @@
+{
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "statement": "An API Consumer can call a single endpoint and receive a static \"Hello, World!\" greeting to verify the API is reachable",
+      "stories": [1],
+      "criteria": [
+        { "id": "AC-001-a", "must": "Calling the endpoint returns an HTTP 200 response", "method": "e2e" },
+        { "id": "AC-001-b", "must": "The response body contains the exact greeting message \"Hello, World!\"", "method": "e2e" },
+        { "id": "AC-001-c", "must": "The endpoint can be called without any authentication or API key", "method": "e2e" },
+        { "id": "AC-001-d", "must": "The response does not vary based on request parameters or caller identity", "method": "e2e" }
+      ]
+    }
+  ]
+}
